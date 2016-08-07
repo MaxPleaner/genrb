@@ -2,11 +2,12 @@
 
 This is a skeleton for static websites.
 
-There are three main components:
+There are four main components:
 
   - the `gen.rb` file, which handles compilation
   - the `Guardfile`, which watches files for changes and re-compiles.
   - an extremely simple static server, `webrick.rb`
+  - a `push_dist_to_gh_pages` script which will deploy the generated site
 
 ---
 
@@ -58,3 +59,10 @@ When the `Gemfile` changes, the server stops, `bundle` is automatically run, and
 When a file in the `dist/` folder changes, the browser will live-reload (make sure to install the livereload chrome extension to use this feature).
 
 When any other source file changes, the compilation step will be triggered.
+
+
+## Deploying to gh-pages
+
+1. Clone this repo, customize it however, and generate a site into `dist/`
+2. Run `push_dist_to_gh_pages`, which will push the `dist/` folder to the `gh-pages` branch on github.
+3. Visit the static site at `http://<my_github_username>.github.io/<my_repo_name>`
