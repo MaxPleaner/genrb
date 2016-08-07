@@ -36,6 +36,8 @@ Note that the partial _must begin with an underscore_, and _files shouldn't begi
  _not every `slim` file is compiled to a corresponding `html` file_.
 The `render` is run before the `slim=>html` conversion, and concatenates the `slim` files.
 
+Its also possible to make custom helpers. Just add instance methods to the `helpers.rb` file
+
 Script files should be referenced from slim like `script src='./scripts/my_script.js'`
 
 Style files should be referenced from slim like `link rel='stylesheet' href='./styles/my_style.css'`
