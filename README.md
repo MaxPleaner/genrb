@@ -1,4 +1,4 @@
-## Static Website Skeleton 
+## Static Website Skeleton
 
 This is a skeleton for static websites.
 
@@ -35,9 +35,9 @@ Note that the partial _must begin with an underscore_, and _files shouldn't begi
  _not every `slim` file is compiled to a corresponding `html` file_.
 The `render` is run before the `slim=>html` conversion, and concatenates the `slim` files.
 
-Style files should be referenced from slim like `script src='./scripts/my_script.js'`
+Script files should be referenced from slim like `script src='./scripts/my_script.js'`
 
-Script files should be referenced from slim like `link rel='stylesheet' href='./styles/my_style.css'`
+Style files should be referenced from slim like `link rel='stylesheet' href='./styles/my_style.css'`
 
 It's possible to run the compilation step with `ruby gen.rb`, though this is done automatically when using `guard`
 
@@ -51,7 +51,7 @@ The `ruby webrick.rb` command will `cd` into `dist/` and then run a static webri
 
 The app can be started with `guard`. This will read instructions from the `Guardfile`.
 
-Whenever `guard` is run, an initial compilation is run and the server starts. 
+Whenever `guard` is run, an initial compilation is run and the server starts.
 
 When the `Gemfile` changes, the server stops, `bundle` is automatically run, and the server starts up again
 
