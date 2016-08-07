@@ -5,6 +5,8 @@ require 'coffee-script'
 require 'webrick'
 require 'rerun'
 
+require_relative("./helpers.rb")
+
 class Gen
 
   attr_reader :gen_out_dir
@@ -108,17 +110,6 @@ class Gen
 end
 
 class PartialNotFoundError < StandardError; end
-
-module Helpers
-  def render(filename) # => html string
-    source = Dir.glob("**/#{filename}").shift
-    raise(PartialNotFoundError, "#{filename} can't be located in this directory's file tree") unless source
-    preprocess_slim_file(source)
-  end
-  def grid_sections # => array of html strings
-    Array.new(30) { "<b>Lorum ipsum ... </b>" }
-  end
-end
 
 Gen.new.refresh_gen_out_dir
        .preprocess_scripts
