@@ -8,6 +8,7 @@ gem "slim"
 gem "sass"
 gem "coffee-script"
 gem "therubyracer"
+gem "activesupport"
 
 # guard / livereload
 gem "guard"
